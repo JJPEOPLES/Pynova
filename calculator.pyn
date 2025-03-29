@@ -1,0 +1,53 @@
+# Simple calculator in PyNova
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Error: Division by zero"
+    return a / b
+
+def main():
+    print("PyNova Calculator")
+    print("----------------")
+    print("Operations: +, -, *, /")
+    print("Enter 'q' to quit")
+    print()
+    
+    result = 0
+    print("Result:", result)
+    
+    while True:
+        operation = input("Operation: ")
+        
+        if operation == "q":
+            break
+        
+        if operation not in ["+", "-", "*", "/"]:
+            print("Invalid operation. Try again.")
+            continue
+        
+        try:
+            number = float(input("Number: "))
+            
+            if operation == "+":
+                result = add(result, number)
+            elif operation == "-":
+                result = subtract(result, number)
+            elif operation == "*":
+                result = multiply(result, number)
+            elif operation == "/":
+                result = divide(result, number)
+            
+            print("Result:", result)
+        except:
+            print("Invalid number. Try again.")
+    
+    return "Calculator closed. Final result: " + str(result)
