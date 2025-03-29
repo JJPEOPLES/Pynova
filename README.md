@@ -1,3 +1,126 @@
+
+
+
+
+
+
+
+
+# Section 1
+
+
+
+
+# PyNova Programming Language
+A modern Python extension language that adds powerful features while maintaining full compatibility with standard Python.
+
+### Features
+Python Compatibility: All PyNova code runs with standard Python
+Extended Syntax: Additional language constructs for cleaner code
+Enhanced Type System: More expressive type annotations
+Performance Optimizations: Special decorators for faster execution
+Safety Features: Built-in checks and validations
+System Integration: Better access to system-level functionality
+Installation Guide
+Prerequisites
+Python 3.6 or higher
+pip (Python package manager)
+Installation Steps
+Install PyNova using pip:
+
+pip install pynova
+Verify installation:
+
+pyn3 --version
+Add PyNova to your PATH (optional but recommended):
+
+Download add_pynova_to_path_robust.bat from the repository
+Run it to add PyNova to your user PATH environment variable
+No administrator privileges required
+Important Note About PyNova Launchers
+⚠️ Known Issues: The pyn.bat and pyn2.bat launchers have known bugs:
+
+## Character encoding problems with non-ASCII text
+Issues with command-line arguments
+Path resolution errors
+Elevation privilege problems
+✅ Recommended: Use the pyn3.bat launcher which has been fixed and properly handles:
+
+## File encoding
+Command-line arguments
+Path resolution
+Automatic privilege elevation when needed
+Getting Started
+Create Your First PyNova Script
+Create a file named hello.pyn with the following content:
+
+
+"""
+My first PyNova script
+"""
+
+## Standard Python code works perfectly
+print("Hello from PyNova!")
+
+## PyNova-specific features
+def calculate(x: num, y: num) -> num:
+    """Calculate the sum of two numbers using PyNova's num type"""
+    return x + y
+
+## Use PyNova's special syntax (commented for Python compatibility)
+# @pyn:fast
+def optimized_function():
+    """This function will be optimized by PyNova"""
+    result = 0
+    for i in range(1000000):
+        result += i
+    return result
+
+## Run the code
+if __name__ == "__main__":
+    print(f"5 + 10 = {calculate(5, 10)}")
+    print(f"Optimized result: {optimized_function()}")
+Run Your Script
+# Using PyNova interpreter (recommended)
+pyn3 hello.pyn
+
+# Using standard Python (also works)
+python hello.pyn
+PyNova Tools and Examples
+The PyNova package includes several example applications:
+
+Calculator: Multi-functional calculator with standard, scientific, and unit conversion features
+Bluetooth Emulator: Virtual Bluetooth environment for testing and development
+File Explorer: Enhanced file management with PyNova features
+Web Server: Simple HTTP server with PyNova optimizations
+File Extensions
+.pyn: Standard PyNova script files
+.pynb: PyNova notebook files (similar to Jupyter notebooks)
+.pyni: PyNova interface definition files
+Troubleshooting
+Common Issues
+Encoding Errors: If you see errors like 'charmap' codec can't decode byte..., use pyn3 instead of pyn or pyn2
+Path Issues: If PyNova commands aren't recognized, run add_pynova_to_path_robust.bat
+Permission Errors: For scripts that need system access, use pyn3 --admin your_script.pyn
+Fixing Launcher Issues
+If you're experiencing issues with the launchers:
+
+Use pyn3.bat instead of pyn.bat or pyn2.bat
+For scripts that never need admin privileges, use pyn3_simple.bat
+If you need to run with admin privileges, use pyn3 --admin your_script.pyn
+Documentation
+Full documentation is available at https://pynova.readthedocs.io/
+
+##Community and Support
+GitHub: https://github.com/JJPEOPLES/Pynova
+Discord:Currently dont have
+Stack Overflow: Tag your questions with pynova
+##License
+PyNova is released under the MIT License. See LICENSE file for details
+
+
+# syntax and more
+
 # PyNova Syntax Extensions
 
 PyNova is a programming language that extends Python with additional syntax and features while maintaining compatibility with the Python interpreter. This means you can run PyNova code directly with Python, but you get additional features when using the PyNova interpreter.
@@ -115,121 +238,3 @@ To create PyNova code that works with both Python and the PyNova interpreter:
 4. Use string-based type annotations for PyNova types
 
 This approach gives you the best of both worlds: your code will run with Python, but it will have additional features when run with the PyNova interpreter.
-
-
-
-
-
-
-
-# Section 2
-
-
-
-
-# PyNova Programming Language
-A modern Python extension language that adds powerful features while maintaining full compatibility with standard Python.
-
-### Features
-Python Compatibility: All PyNova code runs with standard Python
-Extended Syntax: Additional language constructs for cleaner code
-Enhanced Type System: More expressive type annotations
-Performance Optimizations: Special decorators for faster execution
-Safety Features: Built-in checks and validations
-System Integration: Better access to system-level functionality
-Installation Guide
-Prerequisites
-Python 3.6 or higher
-pip (Python package manager)
-Installation Steps
-Install PyNova using pip:
-
-pip install pynova
-Verify installation:
-
-pyn3 --version
-Add PyNova to your PATH (optional but recommended):
-
-Download add_pynova_to_path_robust.bat from the repository
-Run it to add PyNova to your user PATH environment variable
-No administrator privileges required
-Important Note About PyNova Launchers
-⚠️ Known Issues: The pyn.bat and pyn2.bat launchers have known bugs:
-
-## Character encoding problems with non-ASCII text
-Issues with command-line arguments
-Path resolution errors
-Elevation privilege problems
-✅ Recommended: Use the pyn3.bat launcher which has been fixed and properly handles:
-
-## File encoding
-Command-line arguments
-Path resolution
-Automatic privilege elevation when needed
-Getting Started
-Create Your First PyNova Script
-Create a file named hello.pyn with the following content:
-
-
-"""
-My first PyNova script
-"""
-
-## Standard Python code works perfectly
-print("Hello from PyNova!")
-
-## PyNova-specific features
-def calculate(x: num, y: num) -> num:
-    """Calculate the sum of two numbers using PyNova's num type"""
-    return x + y
-
-## Use PyNova's special syntax (commented for Python compatibility)
-# @pyn:fast
-def optimized_function():
-    """This function will be optimized by PyNova"""
-    result = 0
-    for i in range(1000000):
-        result += i
-    return result
-
-## Run the code
-if __name__ == "__main__":
-    print(f"5 + 10 = {calculate(5, 10)}")
-    print(f"Optimized result: {optimized_function()}")
-Run Your Script
-# Using PyNova interpreter (recommended)
-pyn3 hello.pyn
-
-# Using standard Python (also works)
-python hello.pyn
-PyNova Tools and Examples
-The PyNova package includes several example applications:
-
-Calculator: Multi-functional calculator with standard, scientific, and unit conversion features
-Bluetooth Emulator: Virtual Bluetooth environment for testing and development
-File Explorer: Enhanced file management with PyNova features
-Web Server: Simple HTTP server with PyNova optimizations
-File Extensions
-.pyn: Standard PyNova script files
-.pynb: PyNova notebook files (similar to Jupyter notebooks)
-.pyni: PyNova interface definition files
-Troubleshooting
-Common Issues
-Encoding Errors: If you see errors like 'charmap' codec can't decode byte..., use pyn3 instead of pyn or pyn2
-Path Issues: If PyNova commands aren't recognized, run add_pynova_to_path_robust.bat
-Permission Errors: For scripts that need system access, use pyn3 --admin your_script.pyn
-Fixing Launcher Issues
-If you're experiencing issues with the launchers:
-
-Use pyn3.bat instead of pyn.bat or pyn2.bat
-For scripts that never need admin privileges, use pyn3_simple.bat
-If you need to run with admin privileges, use pyn3 --admin your_script.pyn
-Documentation
-Full documentation is available at https://pynova.readthedocs.io/
-
-##Community and Support
-GitHub: https://github.com/JJPEOPLES/Pynova
-Discord:Currently dont have
-Stack Overflow: Tag your questions with pynova
-##License
-PyNova is released under the MIT License. See LICENSE file for details
