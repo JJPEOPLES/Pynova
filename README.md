@@ -130,7 +130,7 @@ This approach gives you the best of both worlds: your code will run with Python,
 # PyNova Programming Language
 A modern Python extension language that adds powerful features while maintaining full compatibility with standard Python.
 
-##Features
+### Features
 Python Compatibility: All PyNova code runs with standard Python
 Extended Syntax: Additional language constructs for cleaner code
 Enhanced Type System: More expressive type annotations
